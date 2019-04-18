@@ -1,0 +1,61 @@
+.slide-casos-exito {
+    padding: 1rem;
+    padding-bottom: 0;
+    background-color: $color__text-footer;
+    .wp-block-column {
+      h4 {
+        @include font-set($font__two, normal, $font__size-15);
+      }
+      hr {
+        width: 80%;
+        margin: 1rem auto;
+      }
+      .wp-block-columns {
+        .wp-block-column {
+          .wp-block-columns {
+            .wp-block-column {
+              &:first-child {
+                background-color: $color__background-section-2;
+                padding: 1.5rem;
+                flex-basis: 45%;
+                margin-right: 0;
+                .wp-block-button {
+                  margin: 0;
+                  .wp-block-button__link {
+                    border-radius: 0px;
+                  }
+                }
+              }
+              &:nth-child(2) {
+                flex-basis: auto;
+                margin: 0;
+                padding: 0 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 991.98px) {
+  .slide-casos-exito {
+      padding: 1rem;
+      .wp-block-column {
+        .wp-block-columns {
+          display: flex;
+          flex-flow: column;
+          .wp-block-column {
+            &:first-child {
+              padding: 1.5rem;
+              flex-basis: 100%;
+              order: 2;
+            }
+            &:nth-child(2) {
+              flex-basis: auto;
+            }
+          }
+        }
+      }
+  }
+}
